@@ -118,39 +118,38 @@
   </div>
   <script type="text/javascript">
       $(function () {
-          var message=[
-              {url:"person.png",title:"个人项目",href:"https://getmycoder.github.io/index/"},
-              {url:"github.png",title:"Github",href:"https://github.com/"},
-              {url:"bootcdn.jpg",title:"BootCDN,代码库下载地址",href:"https://www.bootcdn.cn/"},
-              {url:"font.jpg",title:"Font Awesome,字体矢量图标",href:"http://fontawesome.dashgame.com/"},
-              {url:"qtw.jpg",title:"千图网，原网址",href:"http://588ku.com/"},
-              {url:"MSDN.jpg",title:"MSDN网址，电脑系统、办公软件",href:"https://msdn.itellyou.cn/"},
-              {url:"IDEA.jpg",title:"IntelliJ IDEA 注册码,JetBrains产品中的web和php",href:"http://idea.lanyus.com/"},
-              {url:"jspang.jpg",title:"技术胖的博客空间，Vue，vue-cli，webpack，React",href:"http://jspang.com/"},
-              {url:"WebGL.jpg",title:"WebGL中文网址,Three.js教程",href:"http://www.hewebgl.com/"},
-              {url:"ZJW.jpg",title:"主机屋，免费空间，用于测试",href:"http://www.zhujiwu.com/"},
-          ];
-          var SrcS="images/";
-          for (var i=0;i<message.length;i++){
-              var setHtml="<li><img src="+SrcS+message[i].url+" alt=''><a href="+message[i].href+"></a></li>"
-              $(".MySelf ul").append(setHtml);
-              var setHtmlA="<p><span>"+message[i].title+"</span></p>";
-              $(".MySelf ul li").eq(i).find("a").append(setHtmlA)
-          }
-          $(".MySelf ul li").each(function (index) {
-              $(this).hover(function () {
-                  $(this).find("p").animate({
-                      "top":0
-                  },200);
-                  $(this).find("span").css({
-                      "marginTop":($(this).height()-$(this).find("span").height())/2+"px"
-                  })
-              },function () {
-                  $(this).find("p").animate({
-                      "top":"144px"
-                  },200);
-              })
+          var message=[];
+          $.ajax({
+              type:"GET",
+              url:"json.json",
+              success:function (response) {
+                  message=response;
+                  getMessage();
+              }
           });
+          function getMessage() {
+              var SrcS="images/";
+              for (var i=0;i<message.length;i++){
+                  var setHtml="<li><img src="+SrcS+message[i].url+" alt=''><a href="+message[i].href+"></a></li>"
+                  $(".MySelf ul").append(setHtml);
+                  var setHtmlA="<p><span>"+message[i].title+"</span></p>";
+                  $(".MySelf ul li").eq(i).find("a").append(setHtmlA)
+              }
+              $(".MySelf ul li").each(function () {
+                  $(this).hover(function () {
+                      $(this).find("p").animate({
+                          "top":0
+                      },200);
+                      $(this).find("span").css({
+                          "marginTop":($(this).height()-$(this).find("span").height())/2+"px"
+                      })
+                  },function () {
+                      $(this).find("p").animate({
+                          "top":"144px"
+                      },200);
+                  })
+              });
+          }
           var setUrl={
               baidu:{
                   start:"http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=",
