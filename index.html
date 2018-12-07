@@ -116,7 +116,7 @@
     <div class="MySelf">
         <ul>
             <li class="add">
-                <img src="images/add.png" alt="">
+                <img src="images/add.png" alt="" />
                 <a href="javascript:;">
                     <p><span>添加路径</span></p>
                 </a>
@@ -221,7 +221,7 @@
         function getMessage() {
             var SrcS = "images/";
             for (var i = 0; i < message.length; i++) {
-                var setHtml = "<li><img src=" + SrcS + message[i].url + " alt=''><a href=" + message[i].href + "></a></li>"
+                var setHtml = "<li><img src=" + SrcS + message[i].url + " alt='' /><a href=" + message[i].href + "></a></li>"
                 $(".add").before(setHtml);
                 var setHtmlA = "<p><span>" + message[i].title + "</span></p>";
                 $(".MySelf ul li").eq(i).find("a").append(setHtmlA)
