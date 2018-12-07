@@ -328,10 +328,10 @@
                 url: "getAdd.php",
                 data: {user: $(".user").val(), title: $(".title").val(), href: $(".href").val()},
                 success: function (response) {
-                    if (response == "success") {
-                        window.location.href = "https://getmycoder.github.io/MyCoder/"
+                    if (response != "success") {
+                        setTitle();
                     } else {
-                        setTitle()
+                        window.location.href = "https://getmycoder.github.io/MyCoder/"
                     }
                 }
             })
