@@ -2,203 +2,341 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GetCoders</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo1.png">
     <script type="text/javascript" src="jquery.js"></script>
     <style type="text/css">
-        *{margin: 0;padding: 0;}
-        body{margin: 0;padding: 0;font-family: "微软雅黑";background: #232323}
-        input,button{outline: none;}
-        .container{width: 1000px;margin: 0 auto;padding-bottom: 100px;}
-        .items{ padding: 10px 0;margin: 15px 0 0 0;}
-        .items h2{text-align: center}
-        .items h2 img{width: 220px;}
-        .input{overflow: hidden;width: 662px;margin: 10px auto 0;}
-        .input-left{width: 555px;height: 40px;float: left;border:solid #b8b8b8;border-width: 1px 0 1px 1px;overflow: hidden;}
-        .input-left input{width: 545px;height: 40px;border:none;padding-left: 10px;}
-        .input-right{width: 100px;height: 42px;border:none;float: left;}
-        .input-right button{width: 100px;height: 42px;background: none;border:none;color: #fff;font-size: 14px;}
+        * {margin: 0;padding: 0;}
+
+        body {margin: 0;padding: 0;font-family: "微软雅黑";background: #232323}
+
+        input, button {outline: none;}
+
+        .container {width: 1000px;margin: 0 auto;padding-bottom: 100px;}
+
+        .items { padding: 10px 0;margin: 15px 0 0 0;}
+
+        .items h2 {text-align: center}
+
+        .items h2 img {width: 220px;}
+
+        .input {overflow: hidden;width: 662px;margin: 10px auto 0;}
+
+        .input-left {width: 555px;height: 40px;float: left;border: solid #b8b8b8;border-width: 1px 0 1px 1px;overflow: hidden;}
+
+        .input-left input {width: 545px;height: 40px;border: none;padding-left: 10px;}
+
+        .input-right {width: 100px;height: 42px;border: none;float: left;}
+
+        .input-right button {width: 100px;height: 42px;background: none;border: none;color: #fff;font-size: 14px;}
+
         /*百度*/
-        .iRBaidu{background: #1e82f9;}
-        .baiduB{border-color: #1e82f9 !important;}
+        .iRBaidu {background: #1e82f9;}
+
+        .baiduB {border-color: #1e82f9 !important;}
+
         /*搜狗*/
-        .iRSG{background: #ff6957;}
-        .SGB{border-color: #ff6957 !important;}
+        .iRSG {background: #ff6957;}
+
+        .SGB {border-color: #ff6957 !important;}
+
         /*Google*/
-        .iRGG{background: #333;}
-        .iRGGB{border-color: #333 !important;}
-        .iLGG{ -webkit-border-bottom-left-radius: 18px;-moz-border-bottom-left-radius: 18px;border-bottom-left-radius: 18px;
-               -webkit-border-top-left-radius: 18px;-moz-border-top-left-radius: 18px;border-top-left-radius: 18px;}
-        .iRGG{-webkit-border-bottom-right-radius: 18px;-moz-border-bottom-right-radius: 18px;border-bottom-right-radius: 18px;
+        .iRGG {background: #333;}
+
+        .iRGGB {border-color: #333 !important;}
+
+        .iLGG { -webkit-border-bottom-left-radius: 18px;-moz-border-bottom-left-radius: 18px;border-bottom-left-radius: 18px;
+            -webkit-border-top-left-radius: 18px;-moz-border-top-left-radius: 18px;border-top-left-radius: 18px;}
+
+        .iRGG {-webkit-border-bottom-right-radius: 18px;-moz-border-bottom-right-radius: 18px;border-bottom-right-radius: 18px;
             -webkit-border-top-right-radius: 18px;-moz-border-top-right-radius: 18px;border-top-right-radius: 18px;}
+
         /*360*/
-        .iR360{background: #00ba60;}
-        .iL360B{border-color: #00ba60 !important;}
+        .iR360 {background: #00ba60;}
+
+        .iL360B {border-color: #00ba60 !important;}
+
         /*中国*/
-        .iRZG{background: #e3030b;}
-        .iLZGB{border-color: #e3030b !important;}
+        .iRZG {background: #e3030b;}
+
+        .iLZGB {border-color: #e3030b !important;}
+
         /*MySelf*/
-        .MySelf{margin-top: 30px;}
-        .MySelf ul{overflow: hidden;list-style: none;}
-        .MySelf ul li{float: left;width: 144px;height: 144px;border:1px solid #e5e4e4;margin: 10px;cursor: pointer;position: relative;overflow: hidden;}
-        .MySelf ul li img{width: 144px;height: 144px;}
-        .MySelf ul li p{width: 100%;height: inherit;background: rgba(0,0,0,0.8);position: absolute;top: 144px;left: 0; text-align: center}
-        .MySelf ul li a{color: #fff;text-decoration: none;font-size: 14px;display: block;height: inherit;}
-        .MySelf ul li p span{display: block;padding:0 8px;}
+        .MySelf {margin-top: 30px;}
+
+        .MySelf ul {overflow: hidden;list-style: none;}
+
+        .MySelf ul li {float: left;width: 144px;height: 144px;border: 1px solid #e5e4e4;margin: 10px;cursor: pointer;position: relative;overflow: hidden;}
+
+        .MySelf ul li img {width: 144px;height: 144px;}
+
+        .MySelf ul li p {width: 100%;height: inherit;background: rgba(0, 0, 0, 0.8);position: absolute;top: 144px;left: 0; text-align: center}
+
+        .MySelf ul li a {color: #fff;text-decoration: none;font-size: 14px;display: block;height: inherit;}
+
+        .MySelf ul li p span {display: block;padding: 0 8px;}
+
+        /*弹窗*/
+        .pop {position: fixed;top: 0;left: 0;z-index: 999;background: rgba(0, 0, 0, 0.8);width: 100%;display: none;}
+
+        .popCon {margin: 0 auto 0;width: 400px;height: 327px; background: #fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;box-shadow: 0 0 10px 0 #ccc;padding-bottom: 30px;}
+
+        .popTitle {width: 100%;overflow: hidden;}
+
+        .popTitle span {float: right;font-size: 20px;padding: 5px 15px;cursor: pointer;}
+
+        .titleH4 {width: 100%;text-align: center;line-height: 30px;color: #333;}
+
+        .popMain {width: 90%;margin: 15px auto;}
+
+        .popMain p {overflow: hidden;width: 100%;height: 45px;line-height: 45px;}
+
+        .popMain p i {float: left;font-style: normal;font-size: 14px;color: #333;display: block;width: 20%;}
+
+        .popMain p input {float: left;width: 77%;height: 28px;margin-top: 8px;padding-left: 5px;}
+
+        .btn {overflow: hidden;margin-top: 30px;}
+
+        .btn button { border: none;width: 45%;height: 36px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;cursor: pointer;}
+
+        .btnY {background: #1e82f9;float: left;margin-left: 10px;color: #fff;}
+
+        .btnN {background: #ddd;float: right;margin-right: 10px;}
+
+        /*弹窗1*/
+        .pop1 {width: 300px;height: 70px;text-align: center;line-height: 70px;background: rgba(0, 0, 0, 0.6);color: #fff;position: fixed;z-index: 99999;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;display: none; }
     </style>
 </head>
 <body>
-  <div class="container">
-      <!--MySelf-->
-      <div class="MySelf">
-          <ul></ul>
-      </div>
-      <!--百度-->
-      <div class="items">
-          <h2><img src="images/baidu.png" alt=""></h2>
-          <div class="input">
-              <div class="input-left iLBaidu">
-                  <input type="text" class="inputBaidu">
-              </div>
-              <div class="input-right iRBaidu">
-                  <button>百度一下</button>
-              </div>
-          </div>
-      </div>
-      <!--谷歌-->
-      <div class="items">
-          <h2><img src="images/google.png" alt=""></h2>
-          <div class="input">
-              <div class="input-left iLGG">
-                  <input type="text" class="inputiLGG">
-              </div>
-              <div class="input-right iRGG">
-                  <button>Google</button>
-              </div>
-          </div>
-      </div>
-      <!--搜狗-->
-      <div class="items">
-          <h2><img src="images/sougou.png" alt=""></h2>
-          <div class="input">
-              <div class="input-left iLSG">
-                  <input type="text" class="inputiLSG">
-              </div>
-              <div class="input-right iRSG">
-                  <button>搜狗</button>
-              </div>
-          </div>
-      </div>
-      <!--360-->
-      <div class="items">
-          <h2><img src="images/360.png" alt=""></h2>
-          <div class="input">
-              <div class="input-left iL360">
-                  <input type="text" class="inputiL360">
-              </div>
-              <div class="input-right iR360">
-                  <button>360</button>
-              </div>
-          </div>
-      </div>
-      <!--中国-->
-      <div class="items">
-          <h2><img src="images/china.png" alt=""></h2>
-          <div class="input">
-              <div class="input-left iLZG">
-                  <input type="text" class="inputiLZG">
-              </div>
-              <div class="input-right iRZG">
-                  <button>CHINA</button>
-              </div>
-          </div>
-      </div>
-  </div>
-  <script type="text/javascript">
-      $(function () {
-          var message=[];
-          $.ajax({
-              type:"GET",
-              url:"json.json",
-              success:function (response) {
-                  message=response;
-                  getMessage();
-              }
-          });
-          function getMessage() {
-              var SrcS="images/";
-              for (var i=0;i<message.length;i++){
-                  var setHtml="<li><img src="+SrcS+message[i].url+" alt=''><a href="+message[i].href+"></a></li>"
-                  $(".MySelf ul").append(setHtml);
-                  var setHtmlA="<p><span>"+message[i].title+"</span></p>";
-                  $(".MySelf ul li").eq(i).find("a").append(setHtmlA)
-              }
-              $(".MySelf ul li").each(function () {
-                  $(this).hover(function () {
-                      $(this).find("p").animate({
-                          "top":0
-                      },200);
-                      $(this).find("span").css({
-                          "marginTop":($(this).height()-$(this).find("span").height())/2+"px"
-                      })
-                  },function () {
-                      $(this).find("p").animate({
-                          "top":"144px"
-                      },200);
-                  })
-              });
-          }
-          var setUrl={
-              baidu:{
-                  start:"http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=",
-                  end:""
-              },
-              SG:{
-                  start:"https://www.sogou.com/web?query=",
-                  end:"&ie=utf8&_ast=1544068608&_asf=null&w=01029901&p=40040100&dp=1&cid=&cid=&s_from=result_up"
-              },
-              Google:{
-                  start:"https://www.google.com.hk/search?q=",
-                  end:"&aqs=chrome&sourceid=chrome&ie=UTF-8"
-              },
-              B360:{
-                  start:"https://www.so.com/s?q=",
-                  end:"&src=srp&fr=none&ps"
-              },
-              ZG:{
-                  start:"http://www.chinaso.com/search/pagesearch.htm?q=",
-                  end:""
-              }
-          };
-          // 百度
-          setFocus($(".iLBaidu"),"baiduB",$(".iRBaidu"),setUrl.baidu.start,$(".inputBaidu"),setUrl.baidu.end);
-          // 搜狗
-          setFocus($(".iLSG"),"SGB",$(".iRSG"),setUrl.SG.start,$(".inputiLSG"),setUrl.SG.end);
-          // Google
-          setFocus($(".iLGG"),"iRGGB",$(".iRGG"),setUrl.Google.start,$(".inputiLGG"),setUrl.Google.end);
-          // 360
-          setFocus($(".iL360"),"iL360B",$(".iR360"),setUrl.B360.start,$(".inputiL360"),setUrl.B360.end);
-          // 中国
-          setFocus($(".iLZG"),"iLZGB",$(".iRZG"),setUrl.ZG.start,$(".inputiLZG"),setUrl.ZG.end);
-          function setFocus(DIV,ClassName,Obj,InputValS,InputVal,InputValE) {
-              DIV.find("input").focus(function () {
-                  DIV.addClass(ClassName);
-                  $(document).keyup(function (evt) {
-                      if(evt.keyCode==13){
-                          window.location.href=InputValS+InputVal.val()+InputValE;
-                      }
-                  })
-              });
-              DIV.find("input").blur(function () {
-                  DIV.removeClass(ClassName)
-              });
-              Obj.click(function () {
-                  window.location.href=InputValS+InputVal.val()+InputValE;
-              });
-          }
-      })
-  </script>
+<div class="container">
+    <!--MySelf-->
+    <div class="MySelf">
+        <ul>
+            <li class="add">
+                <img src="images/add.png" alt="">
+                <a href="javascript:;">
+                    <p><span>添加路径</span></p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--百度-->
+    <div class="items">
+        <h2><img src="images/baidu.png" alt=""></h2>
+        <div class="input">
+            <div class="input-left iLBaidu">
+                <input type="text" class="inputBaidu">
+            </div>
+            <div class="input-right iRBaidu">
+                <button>百度一下</button>
+            </div>
+        </div>
+    </div>
+    <!--谷歌-->
+    <div class="items">
+        <h2><img src="images/google.png" alt=""></h2>
+        <div class="input">
+            <div class="input-left iLGG">
+                <input type="text" class="inputiLGG">
+            </div>
+            <div class="input-right iRGG">
+                <button>Google</button>
+            </div>
+        </div>
+    </div>
+    <!--搜狗-->
+    <div class="items">
+        <h2><img src="images/sougou.png" alt=""></h2>
+        <div class="input">
+            <div class="input-left iLSG">
+                <input type="text" class="inputiLSG">
+            </div>
+            <div class="input-right iRSG">
+                <button>搜狗</button>
+            </div>
+        </div>
+    </div>
+    <!--360-->
+    <div class="items">
+        <h2><img src="images/360.png" alt=""></h2>
+        <div class="input">
+            <div class="input-left iL360">
+                <input type="text" class="inputiL360">
+            </div>
+            <div class="input-right iR360">
+                <button>360</button>
+            </div>
+        </div>
+    </div>
+    <!--中国-->
+    <div class="items">
+        <h2><img src="images/china.png" alt=""></h2>
+        <div class="input">
+            <div class="input-left iLZG">
+                <input type="text" class="inputiLZG">
+            </div>
+            <div class="input-right iRZG">
+                <button>CHINA</button>
+            </div>
+        </div>
+    </div>
+    <!--弹窗-->
+    <div class="pop">
+        <div class="popCon">
+            <div class="popTitle">
+                <span>&times;</span>
+            </div>
+            <h4 class="titleH4">添加内容</h4>
+            <div class="popMain">
+                <p><i>图片名称</i><span><input type="text" name="user" class="user"></span></p>
+                <p><i>标题</i><span><input type="text" name="title" class="title"></span></p>
+                <p><i>链接路径</i><span><input type="text" name="href" class="href"></span></p>
+                <div class="btn">
+                    <button class="btnY">确定</button>
+                    <button class="btnN">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--弹窗1-->
+    <div class="pop1">
+        图片地址、标题或是链接路径为都不能空
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var message = [];
+        $.ajax({
+            type: "GET",
+            url: "json.json",
+            success: function (response) {
+                message = response;
+                getMessage();
+            }
+        });
+
+        function getMessage() {
+            var SrcS = "images/";
+            for (var i = 0; i < message.length; i++) {
+                var setHtml = "<li><img src=" + SrcS + message[i].url + " alt=''><a href=" + message[i].href + "></a></li>"
+                $(".add").before(setHtml);
+                var setHtmlA = "<p><span>" + message[i].title + "</span></p>";
+                $(".MySelf ul li").eq(i).find("a").append(setHtmlA)
+            }
+            $(".MySelf ul li").each(function () {
+                $(this).hover(function () {
+                    $(this).find("p").animate({
+                        "top": 0
+                    }, 200);
+                    $(this).find("span").css({
+                        "marginTop": ($(this).height() - $(this).find("span").height()) / 2 + "px"
+                    })
+                }, function () {
+                    $(this).find("p").animate({
+                        "top": "144px"
+                    }, 200);
+                })
+            });
+        }
+
+        var setUrl = {
+            baidu: {
+                start: "http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=",
+                end: ""
+            },
+            SG: {
+                start: "https://www.sogou.com/web?query=",
+                end: "&ie=utf8&_ast=1544068608&_asf=null&w=01029901&p=40040100&dp=1&cid=&cid=&s_from=result_up"
+            },
+            Google: {
+                start: "https://www.google.com.hk/search?q=",
+                end: "&aqs=chrome&sourceid=chrome&ie=UTF-8"
+            },
+            B360: {
+                start: "https://www.so.com/s?q=",
+                end: "&src=srp&fr=none&ps"
+            },
+            ZG: {
+                start: "http://www.chinaso.com/search/pagesearch.htm?q=",
+                end: ""
+            }
+        };
+        // 百度
+        setFocus($(".iLBaidu"), "baiduB", $(".iRBaidu"), setUrl.baidu.start, $(".inputBaidu"), setUrl.baidu.end);
+        // 搜狗
+        setFocus($(".iLSG"), "SGB", $(".iRSG"), setUrl.SG.start, $(".inputiLSG"), setUrl.SG.end);
+        // Google
+        setFocus($(".iLGG"), "iRGGB", $(".iRGG"), setUrl.Google.start, $(".inputiLGG"), setUrl.Google.end);
+        // 360
+        setFocus($(".iL360"), "iL360B", $(".iR360"), setUrl.B360.start, $(".inputiL360"), setUrl.B360.end);
+        // 中国
+        setFocus($(".iLZG"), "iLZGB", $(".iRZG"), setUrl.ZG.start, $(".inputiLZG"), setUrl.ZG.end);
+
+        function setFocus(DIV, ClassName, Obj, InputValS, InputVal, InputValE) {
+            DIV.find("input").focus(function () {
+                DIV.addClass(ClassName);
+                $(document).keyup(function (evt) {
+                    if (evt.keyCode == 13) {
+                        window.location.href = InputValS + InputVal.val() + InputValE;
+                    }
+                })
+            });
+            DIV.find("input").blur(function () {
+                DIV.removeClass(ClassName)
+            });
+            Obj.click(function () {
+                window.location.href = InputValS + InputVal.val() + InputValE;
+            });
+        }
+
+        var DH = document.documentElement.clientHeight;
+        var DW = document.documentElement.clientWidth;
+        // 弹窗1
+        $(".pop1").css({
+            "top": (DH - $(".pop1").height()) / 2 - 50 + "px",
+            "left": (DW - $(".pop1").width()) / 2 + "px",
+        });
+
+        function setTitle() {
+            $(".pop1").show();
+            setTimeout(function () {
+                $(".pop1").fadeOut();
+            }, 2500)
+        }
+
+        // 弹窗
+
+        $(".pop").height(document.documentElement.clientHeight);
+        $(".popCon").css({
+            "marginTop": (DH - $(".popCon").height()) / 2 - 50 + "px"
+        });
+        $(".add").click(function () {
+            $(".pop").show();
+        });
+        $(".popTitle span").click(function () {
+            $(".pop").hide();
+        });
+        $(".btnN").click(function () {
+            $(".pop").hide();
+        });
+        $(".btnY").click(function () {
+            $.ajax({
+                type: "GET",
+                url: "getAdd.php",
+                data: {user: $(".user").val(), title: $(".title").val(), href: $(".href").val()},
+                success: function (response) {
+                    if (response != "error") {
+                        window.location.href = response
+                    } else {
+                        setTitle()
+                    }
+                }
+            })
+        })
+    })
+</script>
 </body>
 </html>
