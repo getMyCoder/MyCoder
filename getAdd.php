@@ -13,7 +13,5 @@ if ($url && $title && $href) {
     $SetW = json_encode($SetReads);
     file_put_contents("json.json", $SetW);
     echo "success";
-}else{
-    echo "error";
 }
 ?>
