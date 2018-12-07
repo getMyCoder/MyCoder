@@ -12,7 +12,8 @@ if ($url && $title && $href) {
     $SetReads[$ArrLength]["href"] = $href;
     $SetW = json_encode($SetReads);
     file_put_contents("json.json", $SetW);
-    echo "https://getmycoder.github.io/MyCoder/";
+    echo "success";
 }else{
     echo "error";
 }
+?>
