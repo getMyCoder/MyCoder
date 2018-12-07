@@ -16,4 +16,3 @@ if ($url && $title && $href) {
 }else{
     echo "error";
 }
-?>
