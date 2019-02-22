@@ -47,12 +47,15 @@
         .iLZGB{border-color: #e3030b !important;}
         /*MySelf*/
         .MySelf{margin-top: 30px;}
-        .MySelf ul{overflow: hidden;list-style: none;}
+        .MySelf ul{overflow: hidden;list-style: none;text-align: center}
         .MySelf ul li{float: left;width: 144px;height: 144px;border:1px solid #e5e4e4;margin: 10px;cursor: pointer;position: relative;overflow: hidden;}
         .MySelf ul li img{width: 144px;height: 144px;}
         .MySelf ul li p{width: 100%;height: inherit;background: rgba(0,0,0,0.8);position: absolute;top: 144px;left: 0; text-align: center}
         .MySelf ul li a{color: #fff;text-decoration: none;font-size: 14px;display: block;height: inherit;}
         .MySelf ul li p span{display: block;padding:0 8px;}
+        @media (max-width: 768px) {
+            .MySelf ul li{margin: 1em 0 0 1.7em !important;}
+        }
     </style>
 </head>
 <body>
