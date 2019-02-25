@@ -18,7 +18,7 @@
     {"url":"baoming2.jpg","title":"事业编报名","href":"http://sd.offcn.com/html/2018/07/203139.html"}
   ],
   "plan":{
-    "morning":["ES6","Node.js","Git"],
+    "morning":["ES6","Node.js","Git","web前端面试题"],
     "afternoon":["事业编","公务员"]
   }
 }
