@@ -159,8 +159,14 @@
           });
           function getMessage() {
               var SrcS="images/";
+              var setDefaut="";
               for (var i=0;i<message.length;i++){
-                  var setHtml="<li><img src="+SrcS+message[i].url+" alt=''><a href="+message[i].href+"></a></li>"
+                  if(message[i].url==""){
+                      setDefaut="def.png"
+                  }else{
+                      setDefaut=message[i].url
+                  }
+                  var setHtml="<li><img src="+SrcS+setDefaut+" alt=''><a href="+message[i].href+"></a></li>"
                   $(".add").before(setHtml);
                   var setHtmlA="<p><span>"+message[i].title+"</span></p>";
                   $(".MySelf ul li").eq(i).find("a").append(setHtmlA)
