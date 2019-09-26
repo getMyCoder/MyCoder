@@ -69,7 +69,7 @@
       <!--MySelf-->
       <div class="MySelf">
           <ul>
-              <li class="add"></li>
+              <!--<li class="add"></li>-->
           </ul>
       </div>
       <!--百度-->
@@ -161,7 +161,8 @@
                       setDefaut=message[i].url
                   }
                   var setHtml="<li><img src="+SrcS+setDefaut+" alt=''><a href="+message[i].href+" target='_blank'></a></li>"
-                  $(".add").before(setHtml);
+                  //$(".add").before(setHtml);
+		  $(".MySelf ul").append(setHtml)
                   var setHtmlA="<p><span>"+message[i].title+"</span></p>";
                   $(".MySelf ul li").eq(i).find("a").append(setHtmlA)
               }
