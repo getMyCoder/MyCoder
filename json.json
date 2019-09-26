@@ -1,6 +1,6 @@
 {
   "info":[
-    {"url":"person.png","title":"个人项目","href":"https://getmycoder.github.io/index/"},
+    {"url":"person.png","title":"个人项目","href":"http://www.nodeserver.gq"},
     {"url":"github.png","title":"Github","href":"https://github.com/"},
     {"url":"bootcdn.jpg","title":"BootCDN,代码库下载地址","href":"https://www.bootcdn.cn/"},
     {"url":"font.jpg","title":"Font Awesome,字体矢量图标","href":"http://fontawesome.dashgame.com/"},
@@ -25,7 +25,7 @@
     {"url":"baoming1.jpg","title":"公务员报名","href":"http://www.chinagwyw.org/shandong/"},
     {"url":"baoming2.jpg","title":"事业编报名","href":"http://sd.offcn.com/html/2018/07/203139.html"},
     {"url":"baoming2.jpg","title":"中公教育事业编","href":"http://sd.offcn.com/html/shiyedanwei/zhaokaoxinxi/"},
-    {"url":"href.png","title":"修改地址","href":"https://github.com/getMyCoder/MyCoder/blob/master/index.html"}
+    {"url":"href.png","title":"修改地址","href":"https://github.com/getMyCoder/MyCoder/blob/master/json.json"}
   ],
   "plan":{
     "morning":["录屏工具GifCam"]
