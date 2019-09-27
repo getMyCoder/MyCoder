@@ -81,9 +81,9 @@
 
         .MySelf ul {overflow: hidden;list-style: none;text-align: center}
 
-        .MySelf ul li {float: left;width: 144px;height: 144px;border: 1px solid #e5e4e4;margin: 10px;cursor: pointer;position: relative;overflow: hidden;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+        .MySelf ul li {float: left;width: 120px;height: 120px;border: 1px solid #e5e4e4;margin: 10px;cursor: pointer;position: relative;overflow: hidden;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
 
-        .MySelf ul li img {width: 144px;height: 144px;}
+        .MySelf ul li img {width: 100%;height: inherit;}
 
         .MySelf ul li p {width: 100%;height: inherit;background: rgba(0, 0, 0, 0.8);position: absolute;top: 144px;left: 0; text-align: center}
 
@@ -216,7 +216,7 @@
             width: document.documentElement.clientWidth,
             height: document.documentElement.clientHeight,
         };
-        var imgLength = 6;
+        var imgLength = 5;
         var imgRand = parseInt(Math.random() * imgLength + 1);
         var imgSrc = '';
         if (imgRand < 10) {
