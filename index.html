@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GetCoders</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo1.png">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <script type="text/javascript" src="jquery.js"></script>
     <style type="text/css">
         /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
@@ -77,15 +78,18 @@
         .iLZGB {border-color: #e3030b !important;}
 
         /*MySelf*/
-        .MySelf {margin-top: 10px;}
+        .MySelf {margin-top: 20px;}
 
         .MySelf ul {overflow: hidden;list-style: none;text-align: center}
 
-        .MySelf ul li {float: left;width: 120px;height: 120px;border: 1px solid #e5e4e4;margin: 10px;cursor: pointer;position: relative;overflow: hidden;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+        /*float: left;width: 120px;height: 120px;margin: 10px;*/
+        .MySelf ul li {overflow: hidden;margin: 10px 0;}
 
-        .MySelf ul li img {width: 100%;height: inherit;}
+        .selfLi {border: 1px solid #e5e4e4;cursor: pointer;position: relative;overflow: hidden;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
 
-        .MySelf ul li p {width: 100%;height: inherit;background: rgba(0, 0, 0, 0.8);position: absolute;top: 144px;left: 0; text-align: center}
+        .MySelf ul li img {width: 100%; }
+
+        .MySelf ul li p {width: 100%;height: inherit;background: rgba(0, 0, 0, 0.8);position: absolute;left: 0; text-align: center}
 
         .MySelf ul li a {color: #fff;text-decoration: none;font-size: 14px;display: block;height: inherit;}
 
@@ -107,9 +111,17 @@
 
         .box p span:hover { background: rgba(255, 255, 255, 0.3);}
 
-        .title {background: #f0f0f0;height: 40px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;line-height: 40px;margin: 0 10px 10px 10px;}
+        .title {background: #f0f0f0;height: 35px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;line-height: 35px;margin: 0 10px 10px 10px;}
 
-        .title h2 {font-size: 16px; color: #232323;padding-left: 15px;}
+        .title h2 {font-size: 16px; color: #232323;padding-left: 15px;line-height: 35px !important;}
+
+        .row {margin: 0 !important;}
+
+        @media (max-width: 768px) {
+            .MySelf ul li {margin: 8px 0 !important;}
+        }
+
+        .container {padding: 0 !important;}
     </style>
 </head>
 <body>
@@ -120,29 +132,29 @@
         <!--apply-->
         <div class="MySelf apply">
             <div class="title"><h2>Application</h2></div>
-            <ul>
+            <ul class="row">
                 <!--<li class="add"></li>-->
             </ul>
         </div>
         <!--education-->
         <div class="MySelf education">
             <div class="title"><h2>Education</h2></div>
-            <ul></ul>
+            <ul class="row"></ul>
         </div>
         <!--server-->
         <div class="MySelf server">
             <div class="title"><h2>Server</h2></div>
-            <ul></ul>
+            <ul class="row"></ul>
         </div>
         <!--person-->
         <div class="MySelf person">
             <div class="title"><h2>Other</h2></div>
-            <ul></ul>
+            <ul class="row"></ul>
         </div>
         <!--revise-->
         <div class="MySelf revise">
             <div class="title"><h2>Revise And Sign In</h2></div>
-            <ul></ul>
+            <ul class="row"></ul>
         </div>
         <!--百度-->
         <div class="items">
@@ -210,13 +222,21 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">1</div>
+        <div class="col-md-3 col-sm-6 col-xs-12">2</div>
+        <div class="col-md-3 col-sm-6 col-xs-12">3</div>
+        <div class="col-md-3 col-sm-6 col-xs-12">4</div>
+    </div>
+</div>
 <script type="text/javascript">
     $(function () {
         var HW = {
             width: document.documentElement.clientWidth,
             height: document.documentElement.clientHeight,
         };
-        var imgLength = 5;
+        var imgLength = 4;
         var imgRand = parseInt(Math.random() * imgLength + 1);
         var imgSrc = '';
         if (imgRand < 10) {
@@ -248,10 +268,11 @@
                 } else {
                     setDefaut = message.apply[i].url;
                 }
-                var setHtml = "<li><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.apply[i].href + " target='_blank'></a></li>";
+                var setHtml = "<li><div class='selfLi'><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.apply[i].href + " target='_blank'></a></div></li>";
                 //$(".add").before(setHtml);
                 $(".apply ul").append(setHtml);
                 var setHtmlA = "<p><span>" + message.apply[i].title + "</span></p>";
+                $(".apply ul li").addClass('col-md-2 col-sm-3 col-xs-4');
                 $(".apply ul li").eq(i).find("a").append(setHtmlA);
             }
             // education
@@ -261,10 +282,11 @@
                 } else {
                     setDefaut = message.education[j].url;
                 }
-                var setHtml = "<li><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.education[j].href + " target='_blank'></a></li>";
+                var setHtml = "<li><div class='selfLi'><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.education[j].href + " target='_blank'></a></div></li>";
                 //$(".add").before(setHtml);
                 $(".education ul").append(setHtml);
                 var setHtmlA = "<p><span>" + message.education[j].title + "</span></p>";
+                $(".education ul li").addClass('col-md-2 col-sm-3 col-xs-4');
                 $(".education ul li").eq(j).find("a").append(setHtmlA);
             }
             // server
@@ -274,10 +296,11 @@
                 } else {
                     setDefaut = message.server[k].url;
                 }
-                var setHtml = "<li><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.server[k].href + " target='_blank'></a></li>";
+                var setHtml = "<li><div class='selfLi'><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.server[k].href + " target='_blank'></a></div></li>";
                 //$(".add").before(setHtml);
                 $(".server ul").append(setHtml);
                 var setHtmlA = "<p><span>" + message.server[k].title + "</span></p>";
+                $(".server ul li").addClass('col-md-2 col-sm-3 col-xs-4');
                 $(".server ul li").eq(k).find("a").append(setHtmlA);
             }
             // person
@@ -287,10 +310,11 @@
                 } else {
                     setDefaut = message.person[l].url;
                 }
-                var setHtml = "<li><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.person[l].href + " target='_blank'></a></li>";
+                var setHtml = "<li><div class='selfLi'><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.person[l].href + " target='_blank'></a></div></li>";
                 //$(".add").before(setHtml);
                 $(".person ul").append(setHtml);
                 var setHtmlA = "<p><span>" + message.person[l].title + "</span></p>";
+                $(".person ul li").addClass('col-md-2 col-sm-3 col-xs-4');
                 $(".person ul li").eq(l).find("a").append(setHtmlA);
             }
             // revise
@@ -300,14 +324,22 @@
                 } else {
                     setDefaut = message.revise[m].url;
                 }
-                var setHtml = "<li><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.revise[m].href + " target='_blank'></a></li>";
+                var setHtml = "<li><div class='selfLi'><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.revise[m].href + " target='_blank'></a></div></li>";
                 //$(".add").before(setHtml);
                 $(".revise ul").append(setHtml);
                 var setHtmlA = "<p><span>" + message.revise[m].title + "</span></p>";
+                $(".revise ul li").addClass('col-md-2 col-sm-3 col-xs-4');
                 $(".revise ul li").eq(m).find("a").append(setHtmlA);
             }
 
             $(".MySelf ul li").each(function () {
+                var _this = this;
+                $(this).height($(_this).width());
+                $(this).find('p').css({
+                    'height': $(_this).width() + "px",
+                    'top': $(_this).width() + "px"
+                });
+                $(this).find('img').height($(_this).width() - 2);
                 $(this).hover(function () {
                     $(this).find("p").animate({
                         "top": 0
