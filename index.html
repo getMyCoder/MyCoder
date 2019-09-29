@@ -85,7 +85,7 @@
         /*float: left;width: 120px;height: 120px;margin: 10px;*/
         .MySelf ul li {overflow: hidden;margin: 10px 0;}
 
-        .selfLi {border: 1px solid #e5e4e4;cursor: pointer;position: relative;overflow: hidden;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+        .selfLi {border: 1px solid #e5e4e4;cursor: pointer;position: relative;overflow: hidden;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;width: 100%;}
 
         .MySelf ul li img {width: 100%; }
 
@@ -332,14 +332,15 @@
                 $(".revise ul li").eq(m).find("a").append(setHtmlA);
             }
 
+            var createHeight = $(".MySelf ul li").eq(0).width();
             $(".MySelf ul li").each(function () {
                 var _this = this;
-                $(this).height($(_this).width());
+                $(this).height(createHeight);
                 $(this).find('p').css({
-                    'height': $(_this).width() + "px",
-                    'top': $(_this).width() + "px"
+                    'height': createHeight + "px",
+                    'top': createHeight + "px"
                 });
-                $(this).find('img').height($(_this).width() - 2);
+                $(this).find('img').height(createHeight - 2);
                 $(this).hover(function () {
                     $(this).find("p").animate({
                         "top": 0
