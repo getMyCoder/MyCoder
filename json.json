@@ -4,7 +4,9 @@
     {"url":"font.jpg","title":"Font Awesome,字体矢量图标","href":"http://fontawesome.dashgame.com/"},
     {"url":"qtw.jpg","title":"千图网，原网址","href":"http://588ku.com/"},
     {"url":"MSDN.jpg","title":"MSDN网址，电脑系统、办公软件","href":"https://msdn.itellyou.cn/"},
-    {"url":"IDEA.jpg","title":"IntelliJ IDEA 注册码,JetBrains产品中的web和php","href":"http://idea.lanyus.com/"}
+    {"url":"IDEA.jpg","title":"IntelliJ IDEA 注册码,JetBrains产品中的web和php","href":"http://idea.lanyus.com/"},
+    {"url":"yxws.png","title":"医学微视","href":"https://www.mvyxws.com/"},
+    {"url":"ws.png","title":"speedtest网速测试","href":"https://www.speedtest.net/"}
   ],
   "education": [
     {"url":"jspang.jpg","title":"技术胖的博客空间，Vue，vue-cli，webpack，React","href":"http://jspang.com/"},
