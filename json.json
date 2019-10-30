@@ -39,6 +39,6 @@
     {"url":"href.png","title":"修改项目数据","href":"https://github.com/getMyCoder/Project/blob/master/server.json"}
   ],
   "plan":{
-    "morning":["录屏工具GifCam"]
+    "morning":["录屏工具GifCam","录屏工具ScreenToGif","录屏工具licecapGIF","录屏工具oCam","录屏工具UleadGIFAnimator"]
   }
 }
