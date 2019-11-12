@@ -10,6 +10,7 @@
   ],
   "education": [
     {"url":"jspang.jpg","title":"技术胖的博客空间，Vue，vue-cli，webpack，React","href":"http://jspang.com/"},
+    {"url":"tlxy.jpg","title":"Python培训机构","href":"https://www.tulingxueyuan.com/"},
     {"url":"ITTeam.jpg","title":"前端各视频教程，需要百度网盘下载","href":"https://www.itying.com/"},
     {"url":"WebGL.jpg","title":"WebGL中文网址,Three.js教程","href":"http://www.hewebgl.com/"},
     {"url":"WebGL.jpg","title":"Three.js教程","href":"https://techbrood.com/threejs/docs/"}
