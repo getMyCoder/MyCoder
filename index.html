@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GetCoders</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/logo1.png">
@@ -101,7 +102,7 @@
             .MySelf ul li {margin: 1em 0 0 1.55em !important;}
 
             .box {margin: 50px 15px !important;}
-            }
+        }
 
         .box {max-width: 660px;margin: 50px auto;}
 
@@ -121,7 +122,7 @@
 
         @media (max-width: 768px) {
             .MySelf ul li {margin: 8px 0 !important;}
-            }
+        }
 
         .container {padding: 0 !important;}
 
@@ -131,6 +132,23 @@
     </style>
 </head>
 <body class="bodyActive">
+<script type=text/javascript>
+    var HW = {
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight,
+    };
+    $("body").css('minHeight', HW.height);
+    $("body").append('<div class="loading"><img src="images/loading.png" alt=""></div>');
+    $(".loading").css({
+        'top': (HW.height - $(".loading").height()) * 0.4 + "px",
+        'left': (HW.width - $(".loading").width()) * 0.5 + "px",
+    });
+    var rotateImg = 0;
+    var timerLoading = setInterval(function () {
+        $(".loading").css('transform', 'rotate(' + rotateImg + 'deg)');
+        rotateImg += 3;
+    }, 30);
+</script>
 <div class="bodyBg"></div>
 <div class="containerCon">
     <div class="container">
@@ -238,22 +256,6 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        var HW = {
-            width: document.documentElement.clientWidth,
-            height: document.documentElement.clientHeight,
-        };
-        $("body").css('minHeight', HW.height);
-        $("body").append('<div class="loading"><img src="images/loading.png" alt=""></div>');
-        $(".loading").css({
-            'top': (HW.height - $(".loading").height()) * 0.4 + "px",
-            'left': (HW.width - $(".loading").width()) * 0.5 + "px",
-        });
-        var rotateImg = 0;
-        var timerLoading = setInterval(function () {
-            $(".loading").css('transform', 'rotate(' + rotateImg + 'deg)');
-            rotateImg += 3;
-        }, 30);
-
         var imgLength = 4;
         var imgRand = parseInt(Math.random() * imgLength + 1);
         var imgSrc = '';
