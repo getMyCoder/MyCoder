@@ -149,7 +149,7 @@
         rotateImg += 3;
     }, 30);
 </script>
-<div class="body">
+<div class="body bodyActive">
     <div class="bodyBg"></div>
     <div class="containerCon">
         <div class="container">
@@ -280,7 +280,7 @@
                 $(".body").hide();
                 clearInterval(timerLoading);
                 $(".loading").remove();
-                $("body").removeClass('bodyActive');
+                $(".body").removeClass('bodyActive');
                 $(".body").fadeIn();
             }
         });
