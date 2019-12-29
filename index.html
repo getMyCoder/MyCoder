@@ -131,17 +131,17 @@
         .loading img {width: 120px;height: 120px;margin: 0 auto;}
     </style>
 </head>
-<body class="bodyActive">
+<body>
 <script type=text/javascript>
     var HW = {
         width: document.documentElement.clientWidth,
-        height: document.documentElement.clientHeight,
+        height: document.documentElement.clientHeight
     };
     $("body").css('minHeight', HW.height);
     $("body").append('<div class="loading"><img src="images/loading.png" alt=""></div>');
     $(".loading").css({
         'top': (HW.height - $(".loading").height()) * 0.4 + "px",
-        'left': (HW.width - $(".loading").width()) * 0.5 + "px",
+        'left': (HW.width - $(".loading").width()) * 0.5 + "px"
     });
     var rotateImg = 0;
     var timerLoading = setInterval(function () {
@@ -149,109 +149,111 @@
         rotateImg += 3;
     }, 30);
 </script>
-<div class="bodyBg"></div>
-<div class="containerCon">
-    <div class="container">
-        <!--MySelf-->
-        <!--apply-->
-        <div class="MySelf apply">
-            <div class="title"><h2>Application</h2></div>
-            <ul class="row">
-                <!--<li class="add"></li>-->
-            </ul>
-        </div>
-        <!--education-->
-        <div class="MySelf education">
-            <div class="title"><h2>Education</h2></div>
-            <ul class="row"></ul>
-        </div>
-        <!--server-->
-        <div class="MySelf server">
-            <div class="title"><h2>Server</h2></div>
-            <ul class="row"></ul>
-        </div>
-        <!--person-->
-        <div class="MySelf person">
-            <div class="title"><h2>Other</h2></div>
-            <ul class="row"></ul>
-        </div>
-        <!--revise-->
-        <div class="MySelf revise">
-            <div class="title"><h2>Revise And Sign In</h2></div>
-            <ul class="row"></ul>
-        </div>
-        <!--百度-->
-        <div class="items">
-            <h2><img src="images/baidu.png" alt=""></h2>
-            <div class="input">
-                <div class="input-left iLBaidu">
-                    <input type="text" class="inputBaidu">
-                </div>
-                <div class="input-right iRBaidu">
-                    <button>百度</button>
+<div class="body">
+    <div class="bodyBg"></div>
+    <div class="containerCon">
+        <div class="container">
+            <!--MySelf-->
+            <!--apply-->
+            <div class="MySelf apply">
+                <div class="title"><h2>Application</h2></div>
+                <ul class="row">
+                    <!--<li class="add"></li>-->
+                </ul>
+            </div>
+            <!--education-->
+            <div class="MySelf education">
+                <div class="title"><h2>Education</h2></div>
+                <ul class="row"></ul>
+            </div>
+            <!--server-->
+            <div class="MySelf server">
+                <div class="title"><h2>Server</h2></div>
+                <ul class="row"></ul>
+            </div>
+            <!--person-->
+            <div class="MySelf person">
+                <div class="title"><h2>Other</h2></div>
+                <ul class="row"></ul>
+            </div>
+            <!--revise-->
+            <div class="MySelf revise">
+                <div class="title"><h2>Revise And Sign In</h2></div>
+                <ul class="row"></ul>
+            </div>
+            <!--百度-->
+            <div class="items">
+                <h2><img src="images/baidu.png" alt=""></h2>
+                <div class="input">
+                    <div class="input-left iLBaidu">
+                        <input type="text" class="inputBaidu">
+                    </div>
+                    <div class="input-right iRBaidu">
+                        <button>百度</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--谷歌-->
-        <div class="items">
-            <h2><img src="images/google.png" alt=""></h2>
-            <div class="input">
-                <div class="input-left iLGG">
-                    <input type="text" class="inputiLGG">
-                </div>
-                <div class="input-right iRGG">
-                    <button>Google</button>
-                </div>
-            </div>
-        </div>
-        <!--搜狗-->
-        <div class="items">
-            <h2><img src="images/sougou.png" alt=""></h2>
-            <div class="input">
-                <div class="input-left iLSG">
-                    <input type="text" class="inputiLSG">
-                </div>
-                <div class="input-right iRSG">
-                    <button>搜狗</button>
+            <!--谷歌-->
+            <div class="items">
+                <h2><img src="images/google.png" alt=""></h2>
+                <div class="input">
+                    <div class="input-left iLGG">
+                        <input type="text" class="inputiLGG">
+                    </div>
+                    <div class="input-right iRGG">
+                        <button>Google</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--360-->
-        <div class="items">
-            <h2><img src="images/360.png" alt=""></h2>
-            <div class="input">
-                <div class="input-left iL360">
-                    <input type="text" class="inputiL360">
-                </div>
-                <div class="input-right iR360">
-                    <button>360</button>
-                </div>
-            </div>
-        </div>
-        <!--中国-->
-        <div class="items">
-            <h2><img src="images/china.png" alt=""></h2>
-            <div class="input">
-                <div class="input-left iLZG">
-                    <input type="text" class="inputiLZG">
-                </div>
-                <div class="input-right iRZG">
-                    <button>CHINA</button>
+            <!--搜狗-->
+            <div class="items">
+                <h2><img src="images/sougou.png" alt=""></h2>
+                <div class="input">
+                    <div class="input-left iLSG">
+                        <input type="text" class="inputiLSG">
+                    </div>
+                    <div class="input-right iRSG">
+                        <button>搜狗</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--plan-->
-        <div class="box">
-            <p class="upP"><i></i></p>
+            <!--360-->
+            <div class="items">
+                <h2><img src="images/360.png" alt=""></h2>
+                <div class="input">
+                    <div class="input-left iL360">
+                        <input type="text" class="inputiL360">
+                    </div>
+                    <div class="input-right iR360">
+                        <button>360</button>
+                    </div>
+                </div>
+            </div>
+            <!--中国-->
+            <div class="items">
+                <h2><img src="images/china.png" alt=""></h2>
+                <div class="input">
+                    <div class="input-left iLZG">
+                        <input type="text" class="inputiLZG">
+                    </div>
+                    <div class="input-right iRZG">
+                        <button>CHINA</button>
+                    </div>
+                </div>
+            </div>
+            <!--plan-->
+            <div class="box">
+                <p class="upP"><i></i></p>
+            </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">1</div>
-        <div class="col-md-3 col-sm-6 col-xs-12">2</div>
-        <div class="col-md-3 col-sm-6 col-xs-12">3</div>
-        <div class="col-md-3 col-sm-6 col-xs-12">4</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">1</div>
+            <div class="col-md-3 col-sm-6 col-xs-12">2</div>
+            <div class="col-md-3 col-sm-6 col-xs-12">3</div>
+            <div class="col-md-3 col-sm-6 col-xs-12">4</div>
+        </div>
     </div>
 </div>
 <script type="text/javascript">
@@ -275,11 +277,11 @@
             success: function (response) {
                 getMessage(response);
                 setPlan(response.plan);
-                $("body").hide();
+                $(".body").hide();
                 clearInterval(timerLoading);
                 $(".loading").remove();
                 $("body").removeClass('bodyActive');
-                $("body").fadeIn();
+                $(".body").fadeIn();
             }
         });
 
