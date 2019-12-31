@@ -102,7 +102,7 @@
             .MySelf ul li {margin: 1em 0 0 1.55em !important;}
 
             .box {margin: 50px 15px !important;}
-        }
+            }
 
         .box {max-width: 660px;margin: 50px auto;}
 
@@ -122,7 +122,7 @@
 
         @media (max-width: 768px) {
             .MySelf ul li {margin: 8px 0 !important;}
-        }
+            }
 
         .container {padding: 0 !important;}
 
@@ -143,11 +143,14 @@
         'top': (HW.height - $(".loading").height()) * 0.4 + "px",
         'left': (HW.width - $(".loading").width()) * 0.5 + "px"
     });
-    var rotateImg = 0;
-    var timerLoading = setInterval(function () {
-        $(".loading").css('transform', 'rotate(' + rotateImg + 'deg)');
-        rotateImg += 3;
-    }, 30);
+    var rotateImg = 0, timerLoading = null;
+    $(".loading img").ready(function () {
+        timerLoading = setInterval(function () {
+            $(".loading").css('transform', 'rotate(' + rotateImg + 'deg)');
+            rotateImg += 3;
+        }, 30);
+    });
+
 </script>
 <div class="body bodyActive">
     <div class="bodyBg"></div>
@@ -277,11 +280,13 @@
             success: function (response) {
                 getMessage(response);
                 setPlan(response.plan);
-                $(".body").hide();
-                clearInterval(timerLoading);
-                $(".loading").remove();
-                $(".body").removeClass('bodyActive');
-                $(".body").fadeIn();
+                $("body").ready(function () {
+                    $(".body").hide();
+                    clearInterval(timerLoading);
+                    $(".loading").remove();
+                    $(".body").removeClass('bodyActive');
+                    $(".body").fadeIn();
+                });
             }
         });
 
