@@ -126,9 +126,9 @@
 
         .container {padding: 0 !important;}
 
-        .loading {width: 100px;height: 100px;position: fixed;top: 0;left: 0;z-index: 99999;}
+        .loading { overflow: hidden;margin: 0 auto;position: relative;width: 100%;}
 
-        .loading img {width: 100px;height: 100px;margin: 0 auto;}
+        .loading span {color: #fff;font-size: 40px;display: block;width: 30px;text-align: center;height: 60px;float: left;line-height: 60px; position: absolute;top: -60px;}
     </style>
 </head>
 <body>
@@ -138,19 +138,60 @@
         height: document.documentElement.clientHeight
     };
     $("body").css('minHeight', HW.height);
-    $("body").append('<div class="loading"><img src="images/loading.png" alt=""></div>');
-    $(".loading").css({
-        'top': (HW.height - $(".loading").height()) * 0.4 + "px",
-        'left': (HW.width - $(".loading").width()) * 0.5 + "px"
-    });
-    var rotateImg = 0, timerLoading = null;
-    $(".loading img").ready(function () {
-        timerLoading = setInterval(function () {
-            $(".loading").css('transform', 'rotate(' + rotateImg + 'deg)');
-            rotateImg += 3;
-        }, 30);
-    });
 
+    // loading
+    function Loading() {
+        this.loadString = 'Loading...';
+        this.HW = {
+            width: document.documentElement.clientWidth,
+            height: document.documentElement.clientHeight,
+        };
+        this.timer = null;
+    }
+
+    Loading.prototype = {
+        init: function () {
+            $("body").append('<div class="loading"></div>');
+            $(".loading").css({
+                'height': this.HW.height + "px",
+                'width': this.loadString.length * 30 + "px",
+            });
+            var that = this;
+            for (var i = 0; i < this.loadString.length; i++) {
+                $(".loading").append('<span style="left:' + (i * 30) + 'px">' + this.loadString[i] + '</span>');
+            }
+            $(".loading span").each(function (index) {
+                var _this = this;
+                setTimeout(function () {
+                    that.processLoading($(_this));
+                }, 100 * index);
+            });
+        },
+        processLoading: function (_this) {
+            var that = this;
+            _this.animate({
+                'top': (that.HW.height - _this.height()) * 0.5 + 'px'
+            }, 500, function () {
+                that.timer = setInterval(function () {
+                    _this.animate({
+                        'top': ((that.HW.height - _this.height()) * 0.5 - 20) + 'px'
+                    }, 300, function () {
+                        _this.animate({
+                            'top': (that.HW.height - _this.height()) * 0.5 + 'px'
+                        }, 300);
+                    });
+                }, 3000);
+            });
+        },
+        removeLoading: function () {
+            clearInterval(this.timer);
+            $(".loading").fadeOut(function () {
+                $(".loading").remove()
+            });
+        }
+    };
+    var loading = new Loading();
+    loading.init();
 </script>
 <div class="body bodyActive">
     <div class="bodyBg"></div>
@@ -282,9 +323,8 @@
                 setPlan(response.plan);
                 $("body").ready(function () {
                     $(".body").hide();
-                    clearInterval(timerLoading);
-                    $(".loading").remove();
                     $(".body").removeClass('bodyActive');
+                    loading.removeLoading();
                     $(".body").fadeIn();
                 });
             }
@@ -444,6 +484,7 @@
             }
         }
     });
+
 </script>
 </body>
 </html>
