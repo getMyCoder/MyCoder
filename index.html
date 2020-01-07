@@ -186,7 +186,7 @@
         removeLoading: function () {
             clearInterval(this.timer);
             $(".loading").fadeOut(function () {
-                $(".loading").remove()
+                $(".loading").remove();
             });
         }
     };
@@ -321,12 +321,21 @@
             success: function (response) {
                 getMessage(response);
                 setPlan(response.plan);
-                $("body").ready(function () {
-                    $(".body").hide();
+                $(".body").hide();
+                if (!window.location.search){
+                    var timerStatus = setInterval(function () {
+                        if (document.readyState == 'complete') {
+                            clearInterval(timerStatus);
+                            $(".body").removeClass('bodyActive');
+                            loading.removeLoading();
+                            $(".body").fadeIn();
+                        }
+                    }, 30);
+                }else{
                     $(".body").removeClass('bodyActive');
                     loading.removeLoading();
                     $(".body").fadeIn();
-                });
+                }
             }
         });
 
