@@ -104,7 +104,7 @@
             .box {margin: 50px 15px !important;}
             }
 
-        .box {max-width: 660px;margin: 50px auto;}
+        .box { margin: 50px auto;}
 
         .box p {padding: 10px 15px;background: rgba(255, 255, 255, 0.1);color: #ccc;margin: 30px 0 0 0;line-height: 40px;font-size: 12px}
 
@@ -129,6 +129,14 @@
         .loading { overflow: hidden;margin: 0 auto;position: relative;width: 100%;}
 
         .loading span {color: #fff;font-size: 40px;display: block;width: 30px;text-align: center;height: 60px;float: left;line-height: 60px; position: absolute;top: -60px;}
+
+        .boxContainer {background: rgba(255, 255, 255, 0.6); -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; margin: 0 10px 10px 10px;overflow: hidden;}
+
+        .boxTitle {height: 30px;line-height: 30px;font-size: 16px;color: #333;background: rgba(255, 255, 255, 0.3);padding-left: 15px;}
+
+        .boxTC {padding: 5px 10px;overflow: hidden;}
+
+        .boxTC span {padding: 6px 10px;background: rgba(0, 0, 0, 0.6);color: #ddd;margin: 3px 3px; font-size: 12px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;display: block;float: left;}
     </style>
 </head>
 <body>
@@ -225,6 +233,13 @@
                 <div class="title"><h2>Revise And Sign In</h2></div>
                 <ul class="row"></ul>
             </div>
+            <!--plan-->
+            <div class="box">
+                <div class="title"><h2>Tool</h2></div>
+                <div class="boxContainer">
+
+                </div>
+            </div>
             <!--百度-->
             <div class="items">
                 <h2><img src="images/baidu.png" alt=""></h2>
@@ -285,18 +300,6 @@
                     </div>
                 </div>
             </div>
-            <!--plan-->
-            <div class="box">
-                <p class="upP"><i></i></p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">1</div>
-            <div class="col-md-3 col-sm-6 col-xs-12">2</div>
-            <div class="col-md-3 col-sm-6 col-xs-12">3</div>
-            <div class="col-md-3 col-sm-6 col-xs-12">4</div>
         </div>
     </div>
 </div>
@@ -322,7 +325,7 @@
                 getMessage(response);
                 setPlan(response.plan);
                 $(".body").hide();
-                if (!window.location.search){
+                if (!window.location.search) {
                     var timerStatus = setInterval(function () {
                         if (document.readyState == 'complete') {
                             clearInterval(timerStatus);
@@ -331,7 +334,7 @@
                             $(".body").fadeIn();
                         }
                     }, 30);
-                }else{
+                } else {
                     $(".body").removeClass('bodyActive');
                     loading.removeLoading();
                     $(".body").fadeIn();
@@ -488,8 +491,18 @@
         }
 
         function setPlan(planVal) {
-            for (var i = 0; i < planVal.morning.length; i++) {
-                $(".upP i").append("<span>" + planVal.morning[i] + "</span>");
+            var createTool = null;
+            for (var i = 0; i < planVal.length; i++) {
+                createTool = '';
+                for (var j = 0; j < planVal[i].data.length; j++) {
+                    createTool += '<span>' + planVal[i].data[j] + '</span>';
+                }
+                $(".boxContainer").append(
+                    '<div class="boxItems">' +
+                    '<div class="boxTitle">' + planVal[i].title + '</div>' +
+                    '<div class="boxTC">' + createTool + '</div>' +
+                    '</div>'
+                );
             }
         }
     });

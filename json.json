@@ -40,7 +40,8 @@
     {"url":"local.png","title":"修改本地址数据","href":"https://github.com/getMyCoder/MyCoder/blob/master/json.json"},
     {"url":"href.png","title":"修改项目数据","href":"https://github.com/getMyCoder/Project/blob/master/server.json"}
   ],
-  "plan":{
-    "morning":["录屏工具GifCam","录屏工具ScreenToGif","录屏工具licecapGIF","录屏工具oCam","录屏工具UleadGIFAnimator"]
-  }
+  "plan":[
+    {"title":"录屏工具","data": ["录屏工具GifCam","录屏工具ScreenToGif","录屏工具licecapGIF","录屏工具oCam","录屏工具UleadGIFAnimator"]},
+    {"title":"文件夹始终位于屏幕的最上方","data": ["DeskPins"]}
+  ]
 }
