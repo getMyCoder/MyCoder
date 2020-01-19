@@ -218,6 +218,11 @@
                 <div class="title"><h2>Education</h2></div>
                 <ul class="row"></ul>
             </div>
+            <!--servant-->
+            <div class="MySelf servant">
+                <div class="title"><h2>Servant</h2></div>
+                <ul class="row"></ul>
+            </div>
             <!--server-->
             <div class="MySelf server">
                 <div class="title"><h2>Server</h2></div>
@@ -373,6 +378,26 @@
                 $(".education ul li").addClass('col-md-2 col-sm-3 col-xs-4');
                 $(".education ul li").eq(j).find("a").append(setHtmlA);
             }
+            // servant
+            for (var n = 0; n < message.servant.length; n++) {
+                if (message.servant[n].url == "") {
+                    setDefaut = "def.png";
+                } else {
+                    setDefaut = message.servant[n].url;
+                }
+                var setHtml = "<li>" +
+                    "<div class='selfLi'>" +
+                    "<img src=" + SrcS + setDefaut + " alt=''>" +
+                    "<a href=" + message.servant[n].href + " target='_blank'>" +
+                    "</a>" +
+                    "</div>" +
+                    "</li>";
+                //$(".add").before(setHtml);
+                $(".servant ul").append(setHtml);
+                var setHtmlA = "<p><span>" + message.servant[n].title + "</span></p>";
+                $(".servant ul li").addClass('col-md-2 col-sm-3 col-xs-4');
+                $(".servant ul li").eq(n).find("a").append(setHtmlA);
+            }
             // server
             for (var k = 0; k < message.server.length; k++) {
                 if (message.server[k].url == "") {
@@ -415,7 +440,6 @@
                 $(".revise ul li").addClass('col-md-2 col-sm-3 col-xs-4');
                 $(".revise ul li").eq(m).find("a").append(setHtmlA);
             }
-
             var createHeight = $(".MySelf ul li").eq(0).width();
             $(".MySelf ul li").each(function () {
                 var _this = this;
