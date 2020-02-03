@@ -30,8 +30,7 @@
   "person":[
     {"url":"sina.png","title":"新浪新闻","href":"https://news.sina.com.cn/"},
     {"url":"sinaWB.png","title":"新浪微博","href":"https://weibo.com"},
-    {"url":"gp.png","title":"股票","href":"http://www.goomj.com/spp/spp01.htm"},
-    {"url":"dytt.png","title":"影视","href":"https://www.wddytt.com/"}
+    {"url":"gp.png","title":"股票","href":"http://www.goomj.com/spp/spp01.htm"}
   ],
   "servant": [
     {"url":"fb.png","title":"粉笔","href":"https://fenbi.com/page/home"},
@@ -48,7 +47,8 @@
   "movie":[
     {"url":"dytt.png","title":"影视","href":"https://www.wddytt.com/"},
     {"url":"","title":"西瓜影视","href":"https://www.xigua5.com/"},
-    {"url":"","title":"电影家园","href":"http://www.idyjy.com/"}
+    {"url":"","title":"电影家园","href":"http://www.idyjy.com/"},
+    {"url":"","title":"溜溜影院","href":"http://www.liuliuyy.com/"}
   ],
   "plan":[
     {"title":"录屏工具","data": ["录屏工具GifCam","录屏工具ScreenToGif","录屏工具licecapGIF","录屏工具oCam","录屏工具UleadGIFAnimator"]},
