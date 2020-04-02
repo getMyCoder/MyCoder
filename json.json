@@ -15,8 +15,7 @@
     {"url":"tlxy.png","title":"Python培训机构","href":"https://www.tulingxueyuan.com/"},
     {"url":"ITTeam.jpg","title":"前端各视频教程，需要百度网盘下载","href":"https://www.itying.com/"},
     {"url":"WebGL.jpg","title":"WebGL中文网址,Three.js教程","href":"http://www.hewebgl.com/"},
-    {"url":"WebGL.jpg","title":"Three.js教程","href":"https://techbrood.com/threejs/docs/"},
-    {"url":"map.png","title":"地图选择器","href":"http://datav.aliyun.com/tools/atlas"}
+    {"url":"WebGL.jpg","title":"Three.js教程","href":"https://techbrood.com/threejs/docs/"}
   ],
   "server":[
     {"url":"","title":"服务器资源","href":"https://www.freehao123.com/bluemix-kubernetes/"},
@@ -31,26 +30,20 @@
   "person":[
     {"url":"sina.png","title":"新浪新闻","href":"https://news.sina.com.cn/"},
     {"url":"sinaWB.png","title":"新浪微博","href":"https://weibo.com"},
-    {"url":"gp.png","title":"股票","href":"http://www.goomj.com/spp/spp01.htm"}
+    {"url":"gp.png","title":"股票","href":"http://www.goomj.com/spp/spp01.htm"},
+    {"url":"dytt.png","title":"影视","href":"https://www.wddytt.com/"}
   ],
   "servant": [
     {"url":"fb.png","title":"粉笔","href":"https://fenbi.com/page/home"},
     {"url":"gongwuyuan.jpg","title":"公务员试题","href":"http://www.chinagwy.org"},
     {"url":"baoming1.jpg","title":"公务员报名","href":"http://www.gjgwy.org/"},
-    {"url":"baoming2.jpg","title":"中公教育事业编","href":"http://sd.offcn.com/html/shiyedanwei/zhaokaoxinxi/"},
-    {"url":"","title":"2020/3/22","href":"http://182.92.48.99/tyzpwb/"}
+    {"url":"baoming2.jpg","title":"中公教育事业编","href":"http://sd.offcn.com/html/shiyedanwei/zhaokaoxinxi/"}
   ],
   "revise":[
     {"url":"github.png","title":"Github","href":"https://github.com/"},
     {"url":"person.png","title":"个人项目","href":"http://www.nodeserver.gq"},
     {"url":"local.png","title":"修改本地址数据","href":"https://github.com/getMyCoder/MyCoder/blob/master/json.json"},
     {"url":"href.png","title":"修改项目数据","href":"https://github.com/getMyCoder/Project/blob/master/server.json"}
-  ],
-  "movie":[
-    {"url":"dytt.png","title":"影视","href":"https://www.wddytt.com/"},
-    {"url":"","title":"西瓜影视","href":"https://www.xigua5.com/"},
-    {"url":"","title":"电影家园","href":"http://www.idyjy.com/"},
-    {"url":"","title":"溜溜影院","href":"http://www.liuliuyy.com/"}
   ],
   "plan":[
     {"title":"录屏工具","data": ["录屏工具GifCam","录屏工具ScreenToGif","录屏工具licecapGIF","录屏工具oCam","录屏工具UleadGIFAnimator"]},
