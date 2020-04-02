@@ -102,7 +102,7 @@
             .MySelf ul li {margin: 1em 0 0 1.55em !important;}
 
             .box {margin: 50px auto !important;}
-            }
+        }
 
         .box { margin: 50px auto;}
 
@@ -122,7 +122,7 @@
 
         @media (max-width: 768px) {
             .MySelf ul li {margin: 8px 0 !important;}
-            }
+        }
 
         .container {padding: 0 !important;}
 
@@ -440,6 +440,30 @@
                 $(".revise ul li").addClass('col-md-2 col-sm-3 col-xs-4');
                 $(".revise ul li").eq(m).find("a").append(setHtmlA);
             }
+            // 判断location的参数
+            if (window.location.search) {
+                if (window.location.search == '?movie') {
+                    $(".containerCon .container").html('')
+                    $(".containerCon .container").append('<div class="MySelf movie">\n' +
+                        '                <div class="title"><h2>movie</h2></div>\n' +
+                        '                <ul class="row"></ul>\n' +
+                        '            </div>')
+                    // movie
+                    for (var p = 0; p < message.movie.length; p++) {
+                        if (message.movie[p].url == "") {
+                            setDefaut = "def.png";
+                        } else {
+                            setDefaut = message.movie[p].url;
+                        }
+                        var setHtml = "<li><div class='selfLi'><img src=" + SrcS + setDefaut + " alt=''><a href=" + message.movie[p].href + " target='_blank'></a></div></li>";
+                        $(".movie ul").append(setHtml);
+                        var setHtmlA = "<p><span>" + message.movie[p].title + "</span></p>";
+                        $(".movie ul li").addClass('col-md-2 col-sm-3 col-xs-4');
+                        $(".movie ul li").eq(p).find("a").append(setHtmlA);
+                    }
+                }
+            }
+            // 设置li的宽高
             var createHeight = $(".MySelf ul li").eq(0).width();
             $(".MySelf ul li").each(function () {
                 var _this = this;
