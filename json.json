@@ -43,7 +43,7 @@
   ],
   "revise":[
     {"url":"github.png","title":"Github","href":"https://github.com/"},
-    {"url":"person.png","title":"个人项目","href":"http://www.nodeserver.gq"},
+    {"url":"person.png","title":"个人项目","href":"http://nodeserver.gearhostpreview.com/"},
     {"url":"local.png","title":"修改本地址数据","href":"https://github.com/getMyCoder/MyCoder/blob/master/json.json"},
     {"url":"href.png","title":"修改项目数据","href":"https://github.com/getMyCoder/Project/blob/master/server.json"}
   ],
