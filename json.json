@@ -42,6 +42,7 @@
     {"url":"baoming2.jpg","title":"中公教育事业编","href":"http://sd.offcn.com/html/shiyedanwei/zhaokaoxinxi/"}
   ],
   "revise":[
+    {"url":"conf.png","title":"conf配置文件","href":"https://getmycoder.github.io/conf/"},
     {"url":"github.png","title":"Github","href":"https://github.com/"},
     {"url":"person.png","title":"个人项目","href":"http://nodeserver.gearhostpreview.com/"},
     {"url":"local.png","title":"修改本地址数据","href":"https://github.com/getMyCoder/MyCoder/blob/master/json.json"},
