@@ -245,66 +245,6 @@
 
                 </div>
             </div>
-            <!--百度-->
-            <div class="items">
-                <h2><img src="images/baidu.png" alt=""></h2>
-                <div class="input">
-                    <div class="input-left iLBaidu">
-                        <input type="text" class="inputBaidu">
-                    </div>
-                    <div class="input-right iRBaidu">
-                        <button>百度</button>
-                    </div>
-                </div>
-            </div>
-            <!--谷歌-->
-            <div class="items">
-                <h2><img src="images/google.png" alt=""></h2>
-                <div class="input">
-                    <div class="input-left iLGG">
-                        <input type="text" class="inputiLGG">
-                    </div>
-                    <div class="input-right iRGG">
-                        <button>Google</button>
-                    </div>
-                </div>
-            </div>
-            <!--搜狗-->
-            <div class="items">
-                <h2><img src="images/sougou.png" alt=""></h2>
-                <div class="input">
-                    <div class="input-left iLSG">
-                        <input type="text" class="inputiLSG">
-                    </div>
-                    <div class="input-right iRSG">
-                        <button>搜狗</button>
-                    </div>
-                </div>
-            </div>
-            <!--360-->
-            <div class="items">
-                <h2><img src="images/360.png" alt=""></h2>
-                <div class="input">
-                    <div class="input-left iL360">
-                        <input type="text" class="inputiL360">
-                    </div>
-                    <div class="input-right iR360">
-                        <button>360</button>
-                    </div>
-                </div>
-            </div>
-            <!--中国-->
-            <div class="items">
-                <h2><img src="images/china.png" alt=""></h2>
-                <div class="input">
-                    <div class="input-left iLZG">
-                        <input type="text" class="inputiLZG">
-                    </div>
-                    <div class="input-right iRZG">
-                        <button>CHINA</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -485,56 +425,6 @@
                         "top": "144px"
                     }, 200);
                 });
-            });
-        }
-
-        var setUrl = {
-            baidu: {
-                start: "http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=",
-                end: ""
-            },
-            SG: {
-                start: "https://www.sogou.com/web?query=",
-                end: "&ie=utf8&_ast=1544068608&_asf=null&w=01029901&p=40040100&dp=1&cid=&cid=&s_from=result_up"
-            },
-            Google: {
-                start: "https://www.google.com.hk/search?q=",
-                end: "&aqs=chrome&sourceid=chrome&ie=UTF-8"
-            },
-            B360: {
-                start: "https://www.so.com/s?q=",
-                end: "&src=srp&fr=none&ps"
-            },
-            ZG: {
-                start: "http://www.chinaso.com/search/pagesearch.htm?q=",
-                end: ""
-            }
-        };
-        // 百度
-        setFocus($(".iLBaidu"), "baiduB", $(".iRBaidu"), setUrl.baidu.start, $(".inputBaidu"), setUrl.baidu.end);
-        // 搜狗
-        setFocus($(".iLSG"), "SGB", $(".iRSG"), setUrl.SG.start, $(".inputiLSG"), setUrl.SG.end);
-        // Google
-        setFocus($(".iLGG"), "iRGGB", $(".iRGG"), setUrl.Google.start, $(".inputiLGG"), setUrl.Google.end);
-        // 360
-        setFocus($(".iL360"), "iL360B", $(".iR360"), setUrl.B360.start, $(".inputiL360"), setUrl.B360.end);
-        // 中国
-        setFocus($(".iLZG"), "iLZGB", $(".iRZG"), setUrl.ZG.start, $(".inputiLZG"), setUrl.ZG.end);
-
-        function setFocus(DIV, ClassName, Obj, InputValS, InputVal, InputValE) {
-            DIV.find("input").focus(function () {
-                DIV.addClass(ClassName);
-                $(document).keyup(function (evt) {
-                    if (evt.keyCode == 13) {
-                        window.location.href = InputValS + InputVal.val() + InputValE;
-                    }
-                });
-            });
-            DIV.find("input").blur(function () {
-                DIV.removeClass(ClassName);
-            });
-            Obj.click(function () {
-                window.location.href = InputValS + InputVal.val() + InputValE;
             });
         }
 
