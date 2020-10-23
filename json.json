@@ -16,7 +16,8 @@
     {"url":"ITTeam.jpg","title":"前端各视频教程，需要百度网盘下载","href":"https://www.itying.com/"},
     {"url":"WebGL.jpg","title":"WebGL中文网址,Three.js教程","href":"http://www.hewebgl.com/"},
     {"url":"WebGL.jpg","title":"Three.js教程","href":"https://techbrood.com/threejs/docs/"},
-    {"url":"map.png","title":"地图选择器","href":"http://datav.aliyun.com/tools/atlas"}
+    {"url":"map.png","title":"地图选择器","href":"http://datav.aliyun.com/tools/atlas"},
+    {"url":"","title":"D3.js教程","href":"https://iowiki.com/d3js/d3js_quick_guide.html"}
   ],
   "server":[
     {"url":"","title":"服务器资源","href":"https://www.freehao123.com/bluemix-kubernetes/"},
