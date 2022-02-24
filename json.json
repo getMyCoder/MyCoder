@@ -2,13 +2,9 @@
   "apply":[
     {"url":"bootcdn.jpg","title":"BootCDN,代码库下载地址","href":"https://www.bootcdn.cn/"},
     {"url":"font.jpg","title":"Font Awesome,字体矢量图标","href":"http://fontawesome.dashgame.com/"},
-    {"url":"qtw.jpg","title":"千图网，原网址","href":"http://588ku.com/"},
     {"url":"MSDN.jpg","title":"MSDN网址，电脑系统、办公软件","href":"https://msdn.itellyou.cn/"},
     {"url":"IDEA.jpg","title":"IntelliJ IDEA 注册码,JetBrains的所有产品","href":"http://idea.medeming.com/jets/"},
-    {"url":"yxws.png","title":"医学微视","href":"https://www.mvyxws.com/"},
-    {"url":"ws.png","title":"speedtest网速测试","href":"https://www.speedtest.net/"},
-    {"url":"bdyp.png","title":"百度网盘资源","href":"https://www.soohub.com/"},
-    {"url":"bdyp01.png","title":"百度网盘资源","href":"http://www.pansoso.org/"}
+    {"url":"yxws.png","title":"医学微视","href":"https://www.mvyxws.com/"}
   ],
   "education": [
     {"url":"jspang.jpg","title":"技术胖的博客空间，Vue，vue-cli，webpack，React","href":"http://jspang.com/"},
@@ -18,7 +14,11 @@
     {"url":"WebGL.jpg","title":"Three.js教程","href":"https://techbrood.com/threejs/docs/"},
     {"url":"map.png","title":"地图选择器","href":"http://datav.aliyun.com/tools/atlas"},
     {"url":"","title":"D3.js教程","href":"https://iowiki.com/d3js/d3js_quick_guide.html"},
-    {"url":"","title":"D3.js API接口文档","href":"https://www.kancloud.cn/luponu/d3js-api-zh/886553"}
+    {"url":"","title":"D3.js API接口文档","href":"https://www.kancloud.cn/luponu/d3js-api-zh/886553"},
+    {"url":"","title":"Echarts社区一","href":"https://www.isqqw.com/#/homepage"},
+    {"url":"","title":"Echarts社区二","href":"http://www.ppchart.com"},
+    {"url":"","title":"Echarts社区三","href":"http://www.chartsdev.com/forum.php?mod=forumdisplay&fid=2"},
+    {"url":"","title":"Echarts社区四","href":"http://analysis.datains.cn/finance-admin/#/chartLib/all"}
   ],
   "server":[
     {"url":"","title":"服务器资源","href":"https://www.freehao123.com/bluemix-kubernetes/"},
@@ -33,8 +33,7 @@
   "person":[
     {"url":"sina.png","title":"新浪新闻","href":"https://news.sina.com.cn/"},
     {"url":"sinaWB.png","title":"新浪微博","href":"https://weibo.com"},
-    {"url":"gp.png","title":"股票","href":"http://www.goomj.com/spp/spp01.htm"},
-    {"url":"dytt.png","title":"影视","href":"https://www.wddytt.com/"}
+    {"url":"gp.png","title":"股票","href":"http://www.goomj.com/spp/spp01.htm"}
   ],
   "servant": [
     {"url":"fb.png","title":"粉笔","href":"https://fenbi.com/page/home"},
