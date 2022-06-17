@@ -40,7 +40,8 @@
     {"url":"gongwuyuan.jpg","title":"公务员试题","href":"http://www.chinagwy.org"},
     {"url":"baoming1.jpg","title":"公务员报名","href":"http://www.gjgwy.org/"},
     {"url":"baoming1.jpg","title":"公务员报名","href":"http://www.sdgwy.org/"},
-    {"url":"baoming2.jpg","title":"中公教育事业编","href":"http://sd.offcn.com/html/shiyedanwei/zhaokaoxinxi/"}
+    {"url":"baoming2.jpg","title":"中公教育事业编","href":"http://sd.offcn.com/html/shiyedanwei/zhaokaoxinxi/"},
+    {"url":"baoming2.jpg","title":"人力资源和社会保障厅","href":"http://hrss.shandong.gov.cn/channels/ch00232/"}
   ],
   "revise":[
     {"url":"conf.png","title":"conf配置文件","href":"https://getmycoder.github.io/conf/"},
